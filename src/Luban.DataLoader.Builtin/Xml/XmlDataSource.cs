@@ -27,7 +27,7 @@ using Luban.Utils;
 
 namespace Luban.DataLoader.Builtin.Xml;
 
-[DataLoader("xml")]
+[DataLoader("xsd")]
 public class XmlDataSource : DataLoaderBase
 {
     private XElement _doc;

@@ -44,7 +44,7 @@ public class DefaultTableImporter : ITableImporter
         string tableNameFormatStr = EnvManager.Current.GetOptionOrDefault("tableImporter", "tableNameFormat", false, "Tb{0}");
         string valueTypeNameFormatStr = EnvManager.Current.GetOptionOrDefault("tableImporter", "valueTypeNameFormat", false, "{0}");
         var fileNamePattern = new Regex(fileNamePatternStr);
-        var excelExts = new HashSet<string> { "xlsx", "xls", "xlsm", "csv" };
+        var excelExts = new HashSet<string> { "xlsx", "xls", "xlsm", "csv", "xml" };
 
         var tables = new List<RawTable>();
         foreach (string file in Directory.GetFiles(dataDir, "*", SearchOption.AllDirectories))

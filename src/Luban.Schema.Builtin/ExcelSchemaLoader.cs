@@ -29,9 +29,9 @@ using Luban.Utils;
 
 namespace Luban.Schema.Builtin;
 
-[SchemaLoader("table", "xlsx", "xls", "xlsm", "csv")]
-[SchemaLoader("bean", "xlsx", "xls", "xlsm", "csv")]
-[SchemaLoader("enum", "xlsx", "xls", "xlsm", "csv")]
+[SchemaLoader("table", "xlsx", "xls", "xlsm", "csv", "xml")]
+[SchemaLoader("bean", "xlsx", "xls", "xlsm", "csv", "xml")]
+[SchemaLoader("enum", "xlsx", "xls", "xlsm", "csv", "xml")]
 public class ExcelSchemaLoader : SchemaLoaderBase
 {
     private static readonly NLog.Logger s_logger = NLog.LogManager.GetCurrentClassLogger();

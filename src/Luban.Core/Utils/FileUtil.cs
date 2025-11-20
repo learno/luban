@@ -128,7 +128,8 @@ public static class FileUtil
         return fullName.EndsWith(".csv", StringComparison.Ordinal)
                || fullName.EndsWith(".xls", StringComparison.Ordinal)
                || fullName.EndsWith(".xlsx", StringComparison.Ordinal)
-               || fullName.EndsWith(".xlsm", StringComparison.Ordinal);
+               || fullName.EndsWith(".xlsm", StringComparison.Ordinal)
+               || fullName.EndsWith(".xml", StringComparison.Ordinal);
     }
 
     public static (string, string) SplitFileAndSheetName(string url)
