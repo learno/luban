@@ -18,7 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-﻿using ExcelDataReader;
+using ExcelDataReader;
 using Luban.Utils;
 
 namespace Luban.DataLoader.Builtin.Excel;
@@ -368,6 +368,12 @@ public static class SheetLoadUtil
                 if (!findEndPair)
                 {
                     throw new Exception($"列:'[{titleName}' 未找到结束匹配列 '{titleName}]'");
+                }
+                // 处理 * 前缀（multi_rows 标记）
+                if (titleName.StartsWith('*'))
+                {
+                    titleName = titleName.Substring(1);
+                    tags["multi_rows"] = "1";
                 }
                 subTitle = new Title() { Name = titleName, Tags = tags, FromIndex = startIndex, ToIndex = i };
             }
